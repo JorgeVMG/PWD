@@ -12,7 +12,7 @@
     deportes que practica (futbol, basket, tennis, voley) un alumno. Mostrar en la página 
     que procesa el formulario la cantidad de deportes que practica*/
     echo "
-    <form id='from4' name='from3' method='get' action='destino6.php'>
+    <form id='from6' name='from6' method='get' action='destino6.php'>
         <label for='nombre'>nombre</label><input type='text' name='nombre' id='nombre' pl><br>
         <label for='apellido'>apellido</label><input type='text' name='apellido' id='apellido' plac><br>
         <label for='edad'>edad</label><input type='number' name='edad' id='edad' ><br>

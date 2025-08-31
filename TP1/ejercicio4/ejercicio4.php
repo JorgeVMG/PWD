@@ -13,7 +13,7 @@
         persona es mayor de edad o no; (si la edad es mayor o igual a 18). 
         Enviar los datos usando el método GET y luego probar de modificar los datos 
         directamente en la url para ver los dos posibles mensajes. */   
-        echo "<form id='from4' name='from3' method='get' action='destino4.php'>
+        echo "<form id='from4' name='from4' method='get' action='destino4.php'>
         <label for='nombre'>nombre</label><input type='text' name='nombre' id='nombre' pl><br>
         <label for='apellido'>apellido</label><input type='text' name='apellido' id='apellido' plac><br>
         <label for='edad'>edad</label><input type='number' name='edad' id='edad' ><br>

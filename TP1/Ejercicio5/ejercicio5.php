@@ -13,7 +13,7 @@
     estudios primarios, 3-estudios secundarios. Agregar el componente que crea más 
     apropiado para solicitar el sexo. En la página que procesa el formulario mostrar además 
     un mensaje que indique el tipo de estudios que posee y su sexo.  */
-    echo "<form id='from4' name='from3' method='get' action='destino5.php'>
+    echo "<form id='from5' name='from5' method='get' action='destino5.php'>
         <label for='nombre'>nombre</label><input type='text' name='nombre' id='nombre' pl><br>
         <label for='apellido'>apellido</label><input type='text' name='apellido' id='apellido' plac><br>
         <label for='edad'>edad</label><input type='number' name='edad' id='edad' ><br>
