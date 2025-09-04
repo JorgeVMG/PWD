@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Destino 8 precio entrada cine Cinem@s</title>
     <link rel="stylesheet" href="../../vista/css/styleDestino.css">
 </head>
 <body>

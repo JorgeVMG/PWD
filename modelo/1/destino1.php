@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio1Destino</title>
+    <title>Destino 1 Numero Postivo o negativ0</title>
     <link rel="stylesheet" href="../../vista/css/styleDestino.css">
 </head>
 <body>
@@ -22,6 +22,6 @@
             echo "No se recibieron datos<br>";
         }
     ?>
-    <a href="ejercicio1.php">Volver al formulario</a>
+    <a href="../../vista/1/ejercicio1.php">Volver al formulario</a>
 </body>
 </html>

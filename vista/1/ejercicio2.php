@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario 2 GET</title>
     <link rel="stylesheet" href="../../vista/css/style.css">
 </head>
 <body> 

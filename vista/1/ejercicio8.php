@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario 8 Cine Cinem@s</title>
     <link rel="stylesheet" href="../../vista/css/style.css">
 </head>
 <body>
@@ -16,7 +16,8 @@
     formulario que solicite la edad y permita ingresar si se trata de un  estudiante o no. Con 
     un botón enviar los datos a un script encargado de realizar el cálculo y visualizarlo.  
     Agregar un botón para limpiar el formulario y volver a consultar.  */
-    echo "<form id='form8' name='form8' method='post' action='../../modelo/1/destino8.php'>
+    echo "<h2>Cine Cinem@as</h2><br>
+        <form id='form8' name='form8' method='post' action='../../modelo/1/destino8.php'>
         <label for='edad'>Edad:</label>
         <input type='number' name='edad' id='edad' required><br>
         <label for='estudiante'>¿Es estudiante?</label><br>
