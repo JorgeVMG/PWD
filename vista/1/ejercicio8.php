@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario 8 Cine Cinem@s</title>
-    <link rel="stylesheet" href="../../vista/css/style.css">
+    <link rel="stylesheet" href="../css/styleForm.css">
 </head>
 <body>
     <?php
@@ -16,16 +16,28 @@
     formulario que solicite la edad y permita ingresar si se trata de un  estudiante o no. Con 
     un botón enviar los datos a un script encargado de realizar el cálculo y visualizarlo.  
     Agregar un botón para limpiar el formulario y volver a consultar.  */
-    echo "<h2>Cine Cinem@as</h2><br>
+    echo "<div id='forms'>
         <form id='form8' name='form8' method='post' action='../../modelo/1/destino8.php'>
-        <label for='edad'>Edad:</label>
-        <input type='number' name='edad' id='edad' required><br>
-        <label for='estudiante'>¿Es estudiante?</label><br>
-        <label for='estudianteSI'>SI</label><input type='radio' name='estudiante' id='estudianteSI' value='si' checked ><br>
-        <label for='estudianteNO'>NO</label><input type='radio' name='estudiante' id='estudianteNO' value='no'><br>
-        <input type='submit' value='Calcular precio'>
-        <input type='reset' value='Limpiar'>
-    </form>";
+        <h2>Cine Cinem@as</h2><br>
+        <div id='opciones'>
+            <label for='edad'>Edad:</label>
+            <input type='number' name='edad' id='edad' required><br>
+        </div>
+        <p>¿Es estudiante?</p>
+        <div id='opciones'>
+            <label for='estudianteSI'>SI</label>
+            <input type='radio' name='estudiante' id='estudianteSI' value='si' checked ><br>
+        </div>
+        <div id='opciones'>
+            <label for='estudianteNO'>NO</label>
+            <input type='radio' name='estudiante' id='estudianteNO' value='no'><br>
+        </div>
+        <div id='enviar'>
+            <input type='submit' name='submit' value='Calcular precio'>
+            <input type='reset' id='borrar'  value='Limpiar'>
+        </div>
+    </form>
+    </div>";
     ?>
 </body>
 </html>

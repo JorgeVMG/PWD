@@ -10,7 +10,7 @@
     <h1>Procesando</h1>
     <?php
         if ($_POST){
-            $numeroFormulario = $_POST['numero_form'];
+            $numeroFormulario = $_POST['numero-form'];
             if ($numeroFormulario > 0) {
                 echo "<h3 class='positivo'>El número $numeroFormulario es positivo</h3>";
             } elseif ($numeroFormulario < 0) {

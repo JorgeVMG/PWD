@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Cine Cinem@s</title>
-    <link rel="stylesheet" href="../vista/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <script src="../vista/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../booststrap/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <script src="../booststrap/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="../../control/3/scriptValiadaFormulario.js"></script>
 </head>
 <body>
@@ -137,7 +137,12 @@
         var forms = document.querySelectorAll('.needs-validation')
         Array.prototype.slice.call(forms).forEach(function (form) {
             form.addEventListener('submit', function (event) {
-                if(!validarFormulario()){
+                if(!validarFormulario() ){
+                    alert("fallo");
+                    event.preventDefault();
+                    event.stopPropagation(); 
+                }else{
+                    alert("todo bien");
                     event.preventDefault();
                     event.stopPropagation(); 
                 }

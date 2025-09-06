@@ -35,12 +35,15 @@
         } else {
             echo "tengo estudios secundarios";
         }
-        if($_GET["deporte"]){
-            $deporte = $_GET["deporte"];
-            echo " practico $deporte. <br>Y vivo en $direccion";
-        } else {
-            echo " no practico deportes. <br>Y vivo en $direccion";
+        if (!empty($_GET["deporte"])) {
+            $deportes = $_GET["deporte"];
+            $cantDeportes = count($deportes);
+            echo " y practico $cantDeportes deportes";
+        }else{
+            echo " y no practico deportes";
         }
+        
+    
     } else {
         echo "No se recibieron datos<br>";
     }

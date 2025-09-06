@@ -1,19 +1,3 @@
-function validarFormulario() {
-    var anio = validarAnio();
-    var duracion = validarDuracion();
-    var titulo = Validartitutlo();
-    var director = validarDirector();
-    var actores = validarActores();
-    var guion = validarGuion();
-    var produccion = validarProduccion();
-    var nacionalidad = validarNacionalidad();
-    var imagen = validarImagen();
-    var resultado = false;
-    if(anio && duracion && titulo && director && actores && guion && produccion && nacionalidad && imagen){
-        resultado = true;
-    }
-    return resultado;
-}
 function validarAnio() {
     var anoInput = document.getElementById("ano");
     var anio = anoInput.value;
@@ -135,4 +119,19 @@ function validarNacionalidad(){
         respuesta = false;
     }
     return respuesta;
+}
+function validarFormulario() {
+    var anio = validarAnio();
+    var duracion = validarDuracion();
+    var titulo = validartitutlo();
+    var director = validarDirector();
+    var actores = validarActores();
+    var guion = validarGuion();
+    var produccion = validarProduccion();
+    var nacionalidad = validarNacionalidad();
+    var resultado = false;
+    if(anio && duracion && titulo && director && actores && guion && produccion && nacionalidad){
+        resultado = true;
+    }
+    return resultado;
 }
