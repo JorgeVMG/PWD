@@ -1,84 +1,75 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario 6 deportes</title>
-    <link rel="stylesheet" href="../css/styleForm.css">
-</head>
-<body>
-    
-    <?php 
-    /*Modificar el formulario del ejercicio anterior para que permita seleccionar los diferentes 
-    deportes que practica (futbol, basket, tennis, voley) un alumno. Mostrar en la página 
-    que procesa el formulario la cantidad de deportes que practica*/
-    echo "<div id='forms'>
-        <form id='from6' name='from6' method='get' action='../../modelo/1/destino6.php'>
-            <div id='opciones'>
+<?php include "../estructura/cabecera/incio.php"; ?>
+    <div id='form'>
+        <form id='formulario' name='from' method='post' action='../action/action.php'>
+            <h2>Ingresar sus datos</h2>
+            <input type="hidden" name="tp" value="TP1">
+            <input type="hidden" name="ejercicio" value="6">
+            <div class="cuadros2">
                 <label for='nombre'>nombre</label>
-                <input type='text' name='nombre' id='nombre' ><br>
+                <input type='text' name='nombre' id='nombre' >
             </div>
-            <div id='opciones'>
+            <div class="cuadros2">
                 <label for='apellido'>apellido</label>
-                <input type='text' name='apellido' id='apellido' ><br>
+                <input type='text' name='apellido' id='apellido' >
             </div>
-            <div id='opciones'>
+            <div class="cuadros2">
                 <label for='edad'>edad</label>
-                <input type='number' name='edad' id='edad' ><br>
+                <input type='text' name='edad' id='edad' >
             </div>
-            <div id='opciones'>
+            <div class="cuadros2">
                 <label for='direccion'>direccion</label>
-                <input type='text' name='direccion' id='direccion' ><br>
+                <input type='text' name='direccion' id='direccion' >
             </div>
+            <div class="resp"></div>
             <hr>
             <p>Sexo</p>
-            <div id='opciones'>
+            <div class="cuadros2">
                 <label for='masculino'>Masculino</label>
-                <input type='radio' name='sexo' value='masculino' id='masculino' checked><br>
+                <input type='radio' name='sexo' value='masculino' id='masculino' checked>
             </div>
-            <div id='opciones'>
+            <div class="cuadros2">
                 <label for='femenino'>Femenino</label>
-                <input type='radio' name='sexo' value='femenino' id='femenino'><br>
+                <input type='radio' name='sexo' value='femenino' id='femenino'>
             </div>
-            <div id='opciones'>
+            <div class="cuadros2">
                 <label for='otro'>Otro</label>
-                <input type='radio' name='sexo' value='otro' id='otro'><br>
+                <input type='radio' name='sexo' value='otro' id='otro'>
             </div>
             <hr>
             <p>Nivel De Estudio</p>
-            <div id='opciones'>
-                <label for='no_estudios'>No tiene estudio</label>
-                <input type='radio' name='estudios' value='1' id='no-estudios' checked><br>
+            <div class="cuadros2">
+                <label for='no_estudios'>Nulo</label>
+                <input type='radio' name='estudios' value='1' id='no-estudios' checked>
             </div>
-            <div id='opciones'>
+            <div class="cuadros2">
                 <label for='primarios'>Primario</label>
-                <input type='radio' name='estudios' value='2' id='primarios' ><br>
+                <input type='radio' name='estudios' value='2' id='primarios' >
             </div>
-            <div id='opciones'>
+            <div class="cuadros2">
                 <label for='secundarios'>Secundario</label>
-                <input type='radio' name='estudios' value='3' id='secundarios'><br>
+                <input type='radio' name='estudios' value='3' id='secundarios'>
             </div>
             <hr>
-            <div id='opciones'>
+            <p>Deportes que Realiza</p>
+            <div class="cuadros2">
                 <label for='futbol'>Futbol</label>
-                <input type='checkbox' id='deporte' name='deporte[]' value='Futbol'><br>
+                <input type='checkbox' id='deporte' name='deporte[]' value='Futbol'>
             </div>
-            <div id='opciones'>
+            <div class="cuadros2">
                 <label for='basket'>Basket</label>
-                <input type='checkbox' id='deporte' name='deporte[]' value='Basket'><br>
+                <input type='checkbox' id='deporte' name='deporte[]' value='Basket'>
             </div>
-            <div id='opciones'>
+            <div class="cuadros2">
                 <label for='tennis'>Tennis</label>
-                <input type='checkbox' id='deporte' name='deporte[]' value='Tennis'><br>
+                <input type='checkbox' id='deporte' name='deporte[]' value='Tennis'>
             </div>
-            <div id='opciones'>
+            <div class="cuadros2">
                 <label for='voley'>Voley</label>
-                <input type='checkbox' id='deporte' name='deporte[]' value='Voley'><br>
+                <input type='checkbox' id='deporte' name='deporte[]' value='Voley'>
             </div>
             <hr>
-        <input type='submit' name='submit' value='Enviar'>
-    </form>
-    </div>";
-    ?>
-</body>
-</html>
+            <input type='submit' name='submit' value='Enviar'>
+        </form>
+    </div>
+
+<?php include "../estructura/pie/footer.php"; ?>

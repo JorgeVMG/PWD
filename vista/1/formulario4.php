@@ -1,27 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario 4 Mayor o Menor de edad</title>
-    <link rel="stylesheet" href="../css/styleFormularios.css">
-</head>
-<body>
-    <?php
-        /**Modificar el formulario del ejercicio anterior para que usando la edad solicitada, enviar 
-        esos datos a otra página en donde se muestren mensajes distintos dependiendo si la 
-        persona es mayor de edad o no; (si la edad es mayor o igual a 18). 
-        Enviar los datos usando el método GET y luego probar de modificar los datos 
-        directamente en la url para ver los dos posibles mensajes. */   
-        echo "<div id='form'>
-        <form id='from4' name='from4' method='get' action='../../modelo/1/destino4.php'>
-        <label for='nombre'>nombre</label><input type='text' name='nombre' id='nombre' pl><br>
-        <label for='apellido'>apellido</label><input type='text' name='apellido' id='apellido' plac><br>
-        <label for='edad'>edad</label><input type='number' name='edad' id='edad' ><br>
-        <label for='direccion'>direccion</label><input type='text' name='direccion' id='direccion' ><br>
-        <input type='submit' name='submit' value='Enviar'>
+<?php include "../estructura/cabecera/incio.php"; ?>
+    <div id='form'>
+        <form id='formulario' name='from' method='get' action='../action/action.php'>
+            <input type="hidden" name="tp" value="TP1">
+            <input type="hidden" name="ejercicio" value="4">
+            <h2>Ingresar sus Datos</h2>
+            <div class="cuadros">
+                <label for='nombre'>nombre</label>
+                <input type='text' name='nombre' id='nombre'>
+            </div>
+            <div class="cuadros">
+                <label for='apellido'>apellido</label>
+                <input type='text' name='apellido' id='apellido'>
+            </div>
+            <div class="cuadros">
+                <label for='edad'>edad</label>
+                <input type='text' name='edad' id='edad'>
+            </div>
+            <div class="cuadros">
+                <label for='direccion'>direccion</label>
+                <input type='text' name='direccion' id='direccion' >
+            </div>
+            <input type='submit' name='submit' value='Enviar'>
+            <div class="resp"></div>
         </form>
-    </div>";
-    ?>
-</body>
-</html>
+    </div>
+
+<?php include "../estructura/pie/footer.php"; ?>

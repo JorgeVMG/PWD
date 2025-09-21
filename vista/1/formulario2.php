@@ -1,22 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario 2 GET</title>
-</head>
-<body> 
-    <?php 
-        echo'<div id="form">
-        <form id="form2" name="form2" method="get" action="destino2.php">
-        Lunes: <input name="horario_lunes" type="number" id="horario_lunes"><br>
-        Martes: <input name="horario_martes" type="number" id="horario_martes"><br>
-        Miércoles: <input name="horario_miercoles" type="number" id="horario_miercoles"><br>
-        Jueves: <input name="horario_jueves" type="number" id="horario_jueves"><br>
-        Viernes: <input name="horario_viernes" type="number" id="horario_viernes"><br>
+<?php include "../estructura/cabecera/incio.php"; ?>
+<div id="form" class="form2">
+    <form id="formulario" name="form" method="get" action="../action/action.php">
+        <input type="hidden" name="tp" value="TP1">
+        <input type="hidden" name="ejercicio" value="2">
+        <h2>ingresar horas de clases</h2>
+        <div class="cuadros">
+            <label for="horario_lunes">lunes</label>
+            <input name="horario_lunes" type="text" id="horario_lunes">           
+        </div>
+        <div class="cuadros">
+            <label for="horario_martes">martes</label>
+            <input name="horario_martes" type="text" id="horario_martes">
+        </div>
+        <div class="cuadros">
+            <label for="horario_miercoles">miercoles</label>
+            <input name="horario_miercoles" type="text" id="horario_miercoles">   
+        </div>
+        <div class="cuadros">
+            <label for="horario_jueves">jueves</label>
+            <input name="horario_jueves" type="text" id="horario_jueves">
+        </div>
+        <div class="cuadros">
+            <label for="horario_viernes">viernes</label>
+            <input name="horario_viernes" type="text" id="horario_viernes">
+        </div>
         <input name="submit" type="submit" value="Aceptar">
-     </form>
-     </div>';
-    ?>
-</body>
-</html>
+        <div class="resp"></div>
+    </form>
+    
+</div>
+
+<?php include "../estructura/pie/footer.php"; ?>
