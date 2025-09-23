@@ -11,4 +11,3 @@
     </div>";
     include "../estructura/pie/footer.php";
 ?>
-    

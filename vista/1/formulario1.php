@@ -4,11 +4,14 @@
   <form id="formulario" name="form" method="post" action="../action/action.php">
     <input type="hidden" name="tp" value="TP1">
     <input type="hidden" name="ejercicio" value="1">
-
-    <label for="numero">Ingresar un Numero</label><br>
-    <input name="numero-form" type="text" id="numero-form">
+    <h2>Ingresar un Numero</h2>
+    <div class="cuadros">
+      <input name="numero-form" type="text" id="numero-form">
+    </div>
+    <div class="cuadros">
+      <input name="submit" type="submit" value="Aceptar">
+    </div>
     <div class="resp"></div>
-    <input name="submit" type="submit" value="Aceptar">
   </form>
 </div>
 

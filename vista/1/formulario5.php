@@ -50,7 +50,9 @@
                 <input type='radio' name='estudios' value='3' id='secundarios'><br>
             </div>
             <hr>
-            <input type='submit' name='submit' value='Enviar'>
+            <div class="cuadros">
+                <input name="submit" type="submit" value="Enviar">
+            </div>
         </form>
     </div>
 

@@ -24,7 +24,9 @@
             <label for="horario_viernes">viernes</label>
             <input name="horario_viernes" type="text" id="horario_viernes">
         </div>
-        <input name="submit" type="submit" value="Aceptar">
+        <div class="cuadros">
+            <input name="submit" type="submit" value="Aceptar">
+        </div>
         <div class="resp"></div>
     </form>
     

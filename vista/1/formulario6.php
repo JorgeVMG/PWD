@@ -68,7 +68,9 @@
                 <input type='checkbox' id='deporte' name='deporte[]' value='Voley'>
             </div>
             <hr>
-            <input type='submit' name='submit' value='Enviar'>
+            <div class="cuadros">
+                <input name="submit" type="submit" value="Aceptar">
+            </div>
         </form>
     </div>
 

@@ -11,18 +11,26 @@ switch ($tp) {
         $controller = new controlFormulario();
         $func = "formulario".$ej;       
         $respuesta = $controller->$func($data);
-        
-        $mensaje = "../1/mensaje.php"; 
-        include $mensaje;
-        break;
+        session_start();
+        $_SESSION['mensaje'] = $respuesta;
+
+        header("Location: ../1/mensaje.php");
+        exit;
 
     case 'TP2':
-        require_once '../Controllers/TP2Controller.php';
-        $controller = new TP2Controller();
-        $func = "ej$ej";
-        $resultado = $controller->$func($data);
-        include '../Views/TP2/mensaje.php';
-        break;
+        require_once '../../control/2/controlFormularioTp2.php';
+        $controller = new controlFormulario();
+        $func = "formulario".$ej;
+        $respuesta = $controller->$func($data);
+        session_start();
+        $_SESSION['mensaje'] = $respuesta;
+        if($ej == "4"){
+            header("Location: ../2/mensajeTp2F4.php");
+        }else{
+            header("Location: ../2/mensajeTp2.php");
+        }
+        
+        exit;
 
     case 'TP3':
         require_once '../Controllers/TP3Controller.php';

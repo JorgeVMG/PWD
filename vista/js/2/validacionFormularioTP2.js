@@ -1,4 +1,47 @@
-function validarFormulario() {
+function validarForm(form,event){
+    var respuesta = true;
+    var eje = document.getElementsByName("ejercicio")[0].value;
+    if(eje === "1"){
+        if (!form.checkValidity()) {
+            respuesta = false;
+        }
+        form.classList.add('was-validated')
+    }else if(eje === "3"){
+        if(!validarContrasena()){
+            respuesta = false;
+        }
+    }else{
+        if(!validarFormularioCine()){
+            respuesta = false;
+        }
+    }
+    if(!respuesta){
+        event.preventDefault()
+        event.stopPropagation()
+    }
+}
+function validarContrasena() {
+    var respuesta = false; 
+    var inputContrasena = document.getElementById("contrasena");
+    var contraValid = document.getElementById("contraseniaValida");
+    var contraInvalid = document.getElementById("contraseniaInvalida");
+    var contrasena = inputContrasena.value;
+
+    inputContrasena.classList.remove("is-invalid", "is-valid");
+
+    if(contrasena.length >= 7 && /[a-zA-Z]/.test(contrasena) && /\d/.test(contrasena)){
+        inputContrasena.classList.add("is-valid");
+        contraInvalid.textContent = "";
+        respuesta = true; 
+    } else {
+        inputContrasena.classList.add("is-invalid"); 
+        contraInvalid.textContent = "La contrasenia debe tener 8 caracteres, con almenos 1 numero y 1 letra";
+        respuesta = false;
+    }
+
+    return respuesta;
+}
+function validarFormularioCine() {
     var anio = validarAnio();
     var duracion = validarDuracion();
     var titulo = Validartitutlo();
@@ -7,8 +50,9 @@ function validarFormulario() {
     var guion = validarGuion();
     var produccion = validarProduccion();
     var nacionalidad = validarNacionalidad();
+    var genero = validarGenero();
     var resultado = false;
-    if(anio && duracion && titulo && director && actores && guion && produccion && nacionalidad){
+    if(anio && duracion && titulo && director && actores && guion && produccion && nacionalidad && genero){
         resultado = true;
     }
     return resultado;
@@ -121,17 +165,31 @@ function validarProduccion(){
     
 }
 function validarNacionalidad(){
-    var nacionalidadInput = document.getElementById("nacionalidad");
-    var nacionalidad = nacionalidadInput.value;
     var respuesta = false;
-    if(nacionalidad.length > 0){
-        nacionalidadInput.classList.remove("is-invalid");
-        nacionalidadInput.classList.add("is-valid");
-        respuesta = true;
-    }else{
+    var nacionalidadInput = document.getElementById("nacionalidad");
+    if(nacionalidadInput.value === "Seleccione"){
         nacionalidadInput.classList.remove("is-valid");
         nacionalidadInput.classList.add("is-invalid");
         respuesta = false;
+    }else{
+        nacionalidadInput.classList.remove("is-invalid");
+        nacionalidadInput.classList.add("is-valid");
+        respuesta = true;
     }
     return respuesta;
 }
+function validarGenero(){
+    var respuesta = false;
+    var generoInput = document.getElementById("genero");
+    if(generoInput.value === "Seleccione"){
+        generoInput.classList.remove("is-valid");
+        generoInput.classList.add("is-invalid");
+        respuesta = false;
+    }else{
+        generoInput.classList.remove("is-invalid");
+        generoInput.classList.add("is-valid");
+        respuesta = true;
+    }
+    return respuesta;
+}
+

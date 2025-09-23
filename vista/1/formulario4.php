@@ -20,7 +20,9 @@
                 <label for='direccion'>direccion</label>
                 <input type='text' name='direccion' id='direccion' >
             </div>
-            <input type='submit' name='submit' value='Enviar'>
+            <div class="cuadros">
+                <input name="submit" type="submit" value="Enviar">
+            </div>
             <div class="resp"></div>
         </form>
     </div>

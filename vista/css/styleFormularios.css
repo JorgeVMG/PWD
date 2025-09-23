@@ -1,6 +1,3 @@
-body{
-    margin: 30px;
-}
 #form{
     margin: 4px;
     display: flex;
@@ -8,7 +5,7 @@ body{
     align-items: center;
     height: 100vh;
 }
-form{
+#form form{
     border-radius: 20px ;
     padding: 15px;
     text-align: center;
@@ -29,28 +26,28 @@ form{
     font-size: 20px;
     width: 40%;
 }
-label{
+.cuadros label{
     font-size: 29px;
     color: rgb(0, 0, 0);
 }
-p{
+.cuadros p{
     text-align: left;
     padding: 0;
     margin: 0;
     font-size: 30px;
 }
-input{
+.cuadros input{
     width: 50%;
     height: 20px;
     margin: 7px;
 }
-select{
+.cuadros select{
     border : solid rgb(41, 41, 159) 2px;
     background: rgb(137, 220, 238);
     width: 70%;
     height: 30px;
 }
-input[name="submit"]{
+.cuadros input[name="submit"]{
     margin-top: 12px;
     padding-bottom: 20px ;
     width: 100px;
@@ -60,7 +57,7 @@ input[name="submit"]{
     border-color: rgb(54, 154, 54);
     background-color: rgb(120, 227, 120);
 }
-input[name="submit"]:hover{
+.cuadros input[name="submit"]:hover{
     
     border-color: rgb(39, 121, 20);
     background-color: rgb(28, 156, 28);
@@ -94,4 +91,3 @@ input[name="submit"]:hover{
     border-color: rgb(69, 29, 29);
     background-color: rgb(137, 23, 23);
 }
-

@@ -20,7 +20,9 @@
                     <option value='division'>Division</option>
                 </select>
             </div>
-                <input type='submit' name='submit' value='Calcular'>
+                <div class="cuadros">
+                    <input name="submit" type="submit" value="Calcular">
+                </div>
                 <div class="resp"></div>
             </form>
     </div>
