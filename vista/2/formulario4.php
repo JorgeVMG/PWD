@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <?php include "../estructura/cabecera/incio.php"; ?>
     <div class="container">
-        <form action="../action/action.php" novalidate class="row g-3 needs-validation" id="form4" method="post">
+        <form action="../action/action.php" novalidate class="row g-3 needs-validation border border-dark mt-3 pb-3" id="form4" method="post">
             <input type="hidden" name="tp" value="TP2">
             <input type="hidden" name="ejercicio" value="4">
+            <div class="col-12 ">
+                <h2>Cinem@</h2>
+            </div>
             <div class="col-6">
                 <label for="titulo" class="form-label">Titulo</label>
                 <input type="text" class="form-control" id="titulo" name="titulo" required>
@@ -120,16 +123,16 @@
                 <input type="radio" id="restricionDeEdad" name="restrincionDeEdad" value="M+13">mayores de 7 a&ntilde;os
                 <input type="radio" id="restricionDeEdad" name="restrincionDeEdad" value="M+16">mayores de 18 a&ntilde;os
             </div>
-            <div class="col-6">
+            <div class="col-12">
                 <label for="sinopsis">Sinopsis</label> <br>
                 <textarea class="form-control mb-3" name="sinopsis" id="sinopsis"></textarea>
             </div>
-            <div class="col-6"></div>
-            <div class="col-6 text-center" >
-                <input class="border border-2 rounded-pill " type="submit" value="Enviar">
+            <div class="col-10"></div>
+            <div class="col-1 text-center" >
+                <input class="btn btn-primary " type="submit" value="Enviar">
             </div>
-            <div class="col-6 text-center" >
-                <input class="border border-2 rounded-pill " type="reset" value="borrar">
+            <div class="col-1 text-center" >
+                <input class="btn btn-secondary" type="reset" value="borrar">
             </div>
         </form>
     </div>

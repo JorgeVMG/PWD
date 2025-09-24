@@ -42,7 +42,7 @@ switch ($tp) {
         if($ej == "3"){
             header("Location: ../3/mensajeTp3F3.php");
         }else{
-            header("Location: ../2/mensaje.php");
+            header("Location: ../3/mensaje.php");
         }
         
         exit;
