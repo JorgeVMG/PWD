@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Cine Cinem@s</title>
-    <link rel="stylesheet" href="../booststrap/bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <script src="../booststrap/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
-    <script src="../../control/3/scriptValiadaFormulario.js"></script>
-</head>
-<body>
+<?php include "../estructura/cabecera/incio.php"; ?>
     <div class="container">
-        <form action="../../modelo/3/presentacion3.php" novalidate class="row g-3 needs-validation" id="form4" method="post" enctype="multipart/form-data">
+        <form action="../action/action.php" novalidate class="row g-3 needs-validation" id="form4" method="post" enctype="multipart/form-data">
             <div class="col-6">
+                <input type="hidden" name="tp" value="TP3">
+                <input type="hidden" name="ejercicio" value="3">
                 <label for="titulo" class="form-label">Titulo</label>
                 <input type="text" class="form-control" id="titulo" name="titulo" required>
                 <div class="valid-feedback">
@@ -72,18 +64,28 @@
                 </div>
             </div>
             <div class="col-6">
-                <label for="nacionalidad" class="form-label">nacionalidad</label><br>
-                <input type="text" class="form-control" id="nacionalidad" name="nacionalidad" required>
-                <div class="valid-feedback">
-                    es correcto
-                </div>
+                <label for="genero" class="form-label">Nacionalidad</label><br>
+                <select name="nacionalidad" id="nacionalidad" class="form-select" required>
+                    <option value="Seleccione">--Seleccione--</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="México">México</option>
+                    <option value="Perú">Perú</option>
+                    <option value="España">España</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="Francia">Francia</option>
+                    <option value="Alemania">Alemania</option>
+                </select >
                 <div class="invalid-feedback">
-                    Datos de la nacionalidad incompletos o incorrectos
+                    Debe seleccionar una nacionalidad válida.
                 </div>
             </div>
             <div class="col-6">
                 <label for="genero" class="form-label">Genero</label><br>
-                <select name="Genero" id="Genero" required>
+                <select name="genero" id="genero" class="form-select" required>
+                    <option value="Seleccione">--Seleccione--</option>
                     <option value="accion">Accion</option>
                     <option value="comedia">Comedia</option>
                     <option value="drama">Drama</option>
@@ -121,33 +123,16 @@
             <div class="col-6" >
                 <label for="imagen" class="form-label">Ingrese imagen de la Pelicula</label>
                 <input name="fileToUpload" id="fileToUpload" class="form-control" type="file">
-                <div class="invalid-feedblack" id="errorArchivo"></div>
-                <div class="valid-feedblack" id="aciertoArchivo"></div>
+                <div class="invalid-feedback" id="errorArchivo"></div>
+                <div class="valid-feedback" id="aciertoArchivo"></div>
             </div>
             <div class="col-12"></div>
             <div class="col-6 text-center" >
-                <input class="border border-2 rounded-pill " type="submit" value="Enviar">
+                <input class="btn btn-primary" type="submit" value="Enviar">
             </div>
             <div class="col-6 text-center" >
-                <input class="border border-2 rounded-pill " type="reset" value="borrar">
+                <input class="btn btn-secondary" type="reset" value="Borrar">
             </div>
         </form>
     </div>
-    <script>
-        var forms = document.querySelectorAll('.needs-validation')
-        Array.prototype.slice.call(forms).forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if(!validarFormulario() ){
-                    alert("fallo");
-                    event.preventDefault();
-                    event.stopPropagation(); 
-                }else{
-                    alert("todo bien");
-                    event.preventDefault();
-                    event.stopPropagation(); 
-                }
-            })
-        })
-    </script>    
-</body>
-</html>
+<?php include "../estructura/pie/footer.php"; ?>

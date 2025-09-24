@@ -33,10 +33,17 @@ switch ($tp) {
         exit;
 
     case 'TP3':
-        require_once '../Controllers/TP3Controller.php';
-        $controller = new TP3Controller();
-        $func = "ej$ej";
-        $resultado = $controller->$func($data);
-        include '../Views/TP3/mensaje.php';
-        break;
+        require_once '../../control/3/controlFormularioTp3.php';
+        $controller = new controlFormulario();
+        $func = "formulario".$ej;       
+        $respuesta = $controller->$func($data);
+        session_start();
+        $_SESSION['mensaje'] = $respuesta;
+        if($ej == "3"){
+            header("Location: ../3/mensajeTp3F3.php");
+        }else{
+            header("Location: ../2/mensaje.php");
+        }
+        
+        exit;
 }
